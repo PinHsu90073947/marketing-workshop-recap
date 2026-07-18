@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>行銷 Workshop 回顧 · 2026.07.17</title>
+<style>
+:root{
+  --bg:#faf9f5; --card:#ffffff; --ink:#2c2c2a; --ink-2:#5f5e5a; --ink-3:#888780;
+  --line:#e3e1d9; --accent:#185fa5; --accent-bg:#eaf2fb;
+  --red:#a32d2d; --red-bg:#f9e3e3; --green:#2e6b3f; --green-bg:#e2f0e6;
+  --gold:#8a6d1f; --gold-bg:#f7efd8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#191917; --card:#22221f; --ink:#e8e6e0; --ink-2:#b4b2a9; --ink-3:#888780;
+    --line:#3a3935; --accent:#7fb3e8; --accent-bg:#1d2c3d;
+    --red:#e08a8a; --red-bg:#3d2222; --green:#8cc79d; --green-bg:#1e3325;
+    --gold:#d9bc6a; --gold-bg:#3a3220;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,"Helvetica Neue","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  line-height:1.75;font-size:16px;}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px 80px;}
+header{padding:64px 0 8px;}
+.kicker{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.12em;}
+h1{font-size:clamp(26px,5vw,36px);line-height:1.3;margin:.3em 0 .2em;}
+.sub{color:var(--ink-2);font-size:15px;margin:0;}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.meta span{font-size:13px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:3px 12px;}
+.thesis{margin:36px 0;background:var(--accent-bg);border-left:4px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:18px 22px;font-size:17px;font-weight:600;line-height:1.8;}
+h2{font-size:21px;margin:56px 0 6px;padding-top:16px;border-top:1px solid var(--line);}
+h2 .no{color:var(--accent);font-family:Georgia,serif;margin-right:10px;}
+h3{font-size:16.5px;margin:28px 0 8px;}
+p{margin:.6em 0;}
+.lede{color:var(--ink-2);margin-top:0;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+.card b{display:block;margin-bottom:4px;}
+.card small{color:var(--ink-2);line-height:1.6;display:block;}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;background:var(--card);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+.tablewrap{overflow-x:auto;}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--bg);font-size:13px;color:var(--ink-2);font-weight:600;}
+tr:last-child td{border-bottom:none;}
+.r{color:var(--red);background:var(--red-bg);border-radius:6px;padding:1px 8px;font-weight:600;white-space:nowrap;}
+.g{color:var(--green);background:var(--green-bg);border-radius:6px;padding:1px 8px;font-weight:600;white-space:nowrap;}
+.pill{display:inline-block;font-size:12.5px;font-weight:600;color:var(--gold);background:var(--gold-bg);
+  border-radius:999px;padding:2px 10px;margin-right:6px;}
+.note{font-size:13.5px;color:var(--ink-3);}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:18px 0;}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:16px 18px;font-size:15px;line-height:1.7;position:relative;}
+blockquote::before{content:"“";position:absolute;top:2px;left:12px;font-size:34px;color:var(--accent);
+  font-family:Georgia,serif;opacity:.45;}
+blockquote p{margin:0 0 0 20px;}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0;}
+.flow .step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 12px;
+  font-size:14px;font-weight:600;}
+.flow .arrow{color:var(--ink-3);}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:0 18px;}
+details summary{cursor:pointer;font-weight:600;padding:13px 0;list-style:none;}
+details summary::before{content:"▸ ";color:var(--accent);}
+details[open] summary::before{content:"▾ ";}
+details .body{padding:0 0 14px;border-top:1px solid var(--line);padding-top:10px;font-size:15px;}
+ul{padding-left:1.3em;margin:.4em 0;}
+li{margin:.25em 0;}
+footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--ink-3);line-height:1.8;}
+a{color:var(--accent);}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;
+  font-size:14.5px;margin:24px 0;}
+.toc b{font-size:13px;color:var(--ink-2);letter-spacing:.08em;}
+.toc a{text-decoration:none;display:inline-block;margin:2px 14px 2px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">INTERNAL WORKSHOP RECAP</div>
+  <h1>行銷 Workshop 活動回顧</h1>
+  <p class="sub">Gaming Growth Fundamentals &amp; Building a Growth-Ready Organization for the Philippines Market</p>
+  <div class="meta">
+    <span>📅 2026 / 7 / 17（五）14:30–18:00</span>
+    <span>📍 Force 4F 大會議室</span>
+    <span>🎓 講師：Steve（Gaming 行銷顧問）</span>
+    <span>👥 5 組 · 20 人參與</span>
+  </div>
+</header>
+
+<div class="thesis">
+成長（Growth）不是行銷部門的事，是所有人的事——它應該刻在每個部門的 DNA 裡。<br>
+產品是基礎值（加法），行銷只是放大器（乘法）；基礎值是負的，放大器只會放大災難。
+</div>
+
+<nav class="toc">
+  <b>目錄</b><br>
+  <a href="#s1">① What is Marketing</a>
+  <a href="#s2">② 三層對標</a>
+  <a href="#s3">③ 北極星指標</a>
+  <a href="#s4">④ AARRR 漏斗</a>
+  <a href="#s5">⑤ 漏斗成本</a>
+  <a href="#s6">⑥ 菲律賓市場</a>
+  <a href="#s7">⑦ 案例分析</a>
+  <a href="#s8">⑧ 三個任務</a>
+  <a href="#s9">⑨ 金句</a>
+  <a href="#s10">⑩ 下一步</a>
+</nav>
+
+<h2 id="s1"><span class="no">01</span>What is Marketing？</h2>
+<p class="lede">Marketing ≠ 投廣告。</p>
+<p><b>Marketing ＝ 喚起注意。</b>看到、聽到、聞到都算——只要透過<b>五官</b>讓人感受到、<b>腦中浮現那個畫面</b>，行銷就成功了。夜市聞到臭豆腐味就想起臭豆腐，這也是 Marketing。它同時是<b>顧客對你產品的第一個心理印象</b>。</p>
+<p>實際的行銷工作遠比想像大：電視廣告腳本、代言人提案、拍攝統籌、KOL 合作、媒體版位採買、社群操作——投放只是其中一小塊。</p>
+<div class="card"><b>案例：賽馬娘的一天四次觸點</b>
+<small>早上滑 FB → 通勤捷運站廣告 → 午休滑手機 → 下班公車全版廣告 → 晚上電視廣告。用頻次在腦中建立畫面。</small></div>
+
+<h2 id="s2"><span class="no">02</span>Acquisition ⊂ Marketing ⊂ Growth</h2>
+<p class="lede">同一個情境：老闆給 100 萬投廣告、進來 1000 個玩家——三種角色看到的完全不同。</p>
+<div class="tablewrap"><table>
+  <tr><th>角色</th><th>關心的問題</th></tr>
+  <tr><td><b>Acquisition</b></td><td>CPA 多少？「100 萬 ÷ 1000 人，我做到了，後面沒我的事。」</td></tr>
+  <tr><td><b>Marketing</b></td><td>客戶<b>喜不喜歡</b>？我們給客戶的<b>印象</b>是什麼？（品牌、定位、客戶樣貌）</td></tr>
+  <tr><td><b>Growth</b></td><td>1000 人最後剩 8 個、一個月剩 1 個——<b>中間哪一層破洞？</b>這是所有人的責任。</td></tr>
+</table></div>
+<p>真實案例：總收入暴跌 8%，破洞在<b>首儲（FTD）</b>——客服接單沒回覆。只問行銷是問不出來的；<b>各部門都有 Growth 意識，才能提早預防、快速定位。</b></p>
+
+<h2 id="s3"><span class="no">03</span>北極星指標</h2>
+<p class="lede">全公司對齊的單一關鍵指標——談「有沒有成長」，全部看它。</p>
+<div class="cards">
+  <div class="card"><b>Netflix</b><small>觀看時數</small></div>
+  <div class="card"><b>Uber</b><small>完成單數</small></div>
+  <div class="card"><b>Facebook</b><small>DAU</small></div>
+  <div class="card"><b>博弈業</b><small><b>每日活躍儲值人數</b></small></div>
+</div>
+<p>為什麼不是 DAU？<b>DAU 容易灌水</b>——它包含當日註冊，而註冊的不一定是你要的玩家（只領優惠、出金就走的羊毛型玩家會撐高 DAU）。北極星對齊後，行銷不再只看點擊率、RD 不再只看系統上線數、運營不再只看 DAU——<b>所有部門完成同一個指標</b>。</p>
+
+<h2 id="s4"><span class="no">04</span>AARRR 漏斗 × PRAPA</h2>
+<div class="flow">
+  <span class="step">Acquisition 獲取</span><span class="arrow">→</span>
+  <span class="step">Activation 啟用</span><span class="arrow">→</span>
+  <span class="step">Retention 留存</span><span class="arrow">→</span>
+  <span class="step">Referral 推薦</span><span class="arrow">→</span>
+  <span class="step">Revenue 營收</span>
+</div>
+<p>注意順序：<b>Referral 在 Revenue 之前</b>——口碑常發生在付費決策之前。對照遊戲營運常用的 <b>PRAPA</b>：Promotion 推廣 → Register 註冊 → Active 活躍 → Pay 付費 → Auto-marketing 自傳播。</p>
+<p>用法只有一句：<b>漏斗逐層看轉換率，掉最多人的那層就是瓶頸。</b></p>
+
+<h2 id="s5"><span class="no">05</span>增長瓶頸與漏斗成本</h2>
+<p class="lede">任務二的情境：1000 人進站，每一層都在漏水。紅＝優化前、綠＝優化後。</p>
+<div class="tablewrap"><table>
+  <tr><th>#</th><th>步驟</th><th>摩擦點</th><th>前</th><th>後</th></tr>
+  <tr><td>01</td><td>技術加載</td><td>首頁 &gt;3 秒、包體過大（弱網下 D0 流失 +30%）</td><td><span class="r">1000</span></td><td><span class="g">1000</span></td></tr>
+  <tr><td>02</td><td>引導註冊</td><td>沒體驗到樂趣就強迫 KYC，心理摩擦大</td><td><span class="r">700</span></td><td><span class="g">900</span></td></tr>
+  <tr><td>03</td><td>開始遊戲</td><td>熱門遊戲入口隱蔽、要多次跳轉</td><td><span class="r">500</span></td><td><span class="g">700</span></td></tr>
+  <tr><td>04</td><td>賺錢/破產</td><td>沒有即時首存轉跳或救援</td><td><span class="r">200</span></td><td><span class="g">500</span></td></tr>
+  <tr><td>05</td><td>金流引導</td><td>儲值按鈕隱蔽、支付介接延遲報錯</td><td><span class="r">100</span></td><td><span class="g">350</span></td></tr>
+  <tr><td>06</td><td>D0 結束</td><td>沒引導裝 APK/PWA（之後召回都要錢）</td><td><span class="r">60</span></td><td><span class="g">200</span></td></tr>
+  <tr><td>07</td><td>玩家 2 訪</td><td>回來後無事可做</td><td><span class="r">20</span></td><td><span class="g">100</span></td></tr>
+  <tr><td>08</td><td>玩家 3 訪</td><td>錢包複雜違反直覺、出金完再流失</td><td><span class="r">10</span></td><td><span class="g">40</span></td></tr>
+</table></div>
+<div class="cards">
+  <div class="card"><b>開始遊戲成本</b><small><span class="r">$10/人</span> → <span class="g">$7.14/人</span>（降約 28.6%）</small></div>
+  <div class="card"><b>3 訪成本</b><small><span class="r">$500/人</span> → <span class="g">$125/人</span>（降 75%）</small></div>
+</div>
+<p><b>前段漏斗的小優化，對後段指標有複利效果</b>——比單純加碼買量划算得多。發現漏洞先想怎麼補；最怕的是把洞遮起來當作不存在——流量就是錢，一直漏。</p>
+
+<h2 id="s6"><span class="no">06</span>菲律賓市場</h2>
+<div class="cards">
+  <div class="card"><b>網路</b><small>預付卡為主、流量貴，「能用 Wi-Fi 就不用行動網路」的玩家佔 70%+</small></div>
+  <div class="card"><b>裝置</b><small>中低階 Android 約 70%；iOS 極少（約 9:1）</small></div>
+  <div class="card"><b>市場</b><small>人口約 1 億，對 Gaming 有興趣約 3 千多萬</small></div>
+  <div class="card"><b>金流</b><small>兩大電子錢包佔 90%+，API 對接品質＝儲值生死線</small></div>
+</div>
+<p>競爭格局：<b>前三強佔約七成</b>，護城河高（KOL 買斷、代言人汰換、實體通路）。但市場量夠大——<b>3–5 名的營收也能活得很好</b>，不是「肉都被吃完只能喝湯」。</p>
+<p><b>警告：不尊重當地市場做產品＝蓋空中城堡。</b></p>
+
+<h2 id="s7"><span class="no">07</span>案例分析</h2>
+<h3>反面：Concord —「不在乎市場」</h3>
+<p>8 年開發、市場飽和無差異化、免費當道卻賣 $40 買斷、<b>內測全找自己人（隔絕真實玩家的測試＝無意義的內測）</b>。上市約兩週下架退款。</p>
+<details><summary>反事實重演：如果 Concord 一開始就做「行銷前置」</summary><div class="body">
+<ul>
+<li><b>美術</b>：開發早期小預算 A/B Test 素材；設計角色時想「能不能成為 Cosplay／短影音素材」。</li>
+<li><b>研發</b>：極簡版本早期公測，早反饋早調整；上市先小預算測留存率，不行就早停損。</li>
+<li><b>定價</b>：免費進場＋遊戲內購，符合市場主流。</li>
+<li><b>裂變</b>：大型曝光時掃碼直接進推薦系統——10% 轉換也可能多帶百萬級玩家。</li>
+<li><b>運營</b>：先測水溫再放大——<b>前期沒信心就燒大預算＝加速滅亡</b>。</li>
+</ul></div></details>
+<h3>正面：皮克敏 &amp; 活俠傳</h3>
+<p><b>皮克敏（Pikmin Bloom）</b>：兩年幾乎沒投廣告，靠社群粉絲自傳播爆紅。<br>
+<b>活俠傳</b>：首月差評 → 持續更新文本 → 韓國 Steam 前 20 → 文本被日本玩家瘋傳。</p>
+<p>共同點：<b>產品本身內建成長。好東西時間沉澱得夠久，終究會被看到。</b></p>
+
+<h2 id="s8"><span class="no">08</span>三個分組任務</h2>
+<details><summary>任務一：Growth Module Funnel Check</summary><div class="body">
+<p>寫出 AARRR 全名，並把 14 項數據指標歸類到漏斗五層。</p>
+<div class="tablewrap"><table>
+<tr><th>層</th><th>指標</th></tr>
+<tr><td>Acquisition</td><td>PWA/APK 安裝數、廣告曝光數、首頁訪客數</td></tr>
+<tr><td>Activation</td><td>註冊數、First bet %</td></tr>
+<tr><td>Retention</td><td>Day3 遊戲時間、DAU、Day2 留存率</td></tr>
+<tr><td>Referral</td><td>好友分享碼、老帶新回饋系統、邀請好友數</td></tr>
+<tr><td>Revenue</td><td>ARPU、LTV、Pay%</td></tr>
+</table></div>
+<p class="note">討論點：PWA/APK 安裝數可同屬 Acquisition/Activation（H5 可先裝再註冊）；分享碼站在「使用分享功能的玩家」角度歸 Referral；當日註冊也算 Active。</p>
+</div></details>
+<details><summary>任務二：How To Support Growth Module Funnel</summary><div class="body">
+<p>依「產品／技術／營運」寫出 8 個漏斗步驟各自能幫什麼，並計算優化前後成本（見上方第 05 節）。各組提出：降低包體、分包載入、簡化 KYC、訪客先玩、破產救援金、多元支付、下載 CTA 獎勵、回歸任務、縮短出金審核……</p>
+</div></details>
+<details><summary>任務三：如何在 Jackpot Combo 落實「行銷前置」</summary><div class="body">
+<p>每組 5 分鐘簡報＋顧問點評。五組提案精華：</p>
+<ul>
+<li><b>話題與在地</b>：結合當地迷因的主題活動、期間限定 Skin、當地節慶與習俗、實體打卡點、與當地廠商合作</li>
+<li><b>裂變機制</b>：註冊自動發邀請碼、邀請人與被邀請人雙向獎勵、全民代理×直播主帶碼、大獎分享推播（「下一個就是我」）、見者有份搶紅包</li>
+<li><b>留存鉤子</b>：新手任務含完整跑一次出金（親身驗證「可以順利出款」）、Day1–7 反水/免手續費、Day30 回流活動、週卡/通行證</li>
+<li><b>數據基建</b>：全漏斗埋點（事件/按鈕/滑動/錯誤全記）、A/B Testing、即時熱門話題觀測系統（AI 輿情——講師：「還沒看過有人做，蠻酷的」）</li>
+<li><b>門票思維</b>：串當地熱門遊戲不是差異化、是門票；「玩家一樣玩熱門遊戲，為什麼選你？」——<b>減少摩擦力才是唯一的做法</b></li>
+</ul>
+<p class="note">講師提醒：企劃要先過「做得到嗎」這關——研發 priority 排不排得進去？先評估用外部資源能做到幾成。</p>
+</div></details>
+
+<h2 id="s9"><span class="no">09</span>金句彙整</h2>
+<div class="quotes">
+<blockquote><p>只要透過五官讓你感受到、腦袋浮出那個畫面，那就是行銷要做的事。</p></blockquote>
+<blockquote><p>Marketing 是顧客對你產品的第一個心理印象。</p></blockquote>
+<blockquote><p>好東西時間沉澱得夠久，終究會被看到。</p></blockquote>
+<blockquote><p>產品是基礎值（加法），行銷是放大器（乘法）——基礎值是負的，放大只會更負。</p></blockquote>
+<blockquote><p>廣告投放只是 Growth 的最後一步。</p></blockquote>
+<blockquote><p>DAU 很容易灌水——我們看的是每日活躍儲值人數。</p></blockquote>
+<blockquote><p>不尊重當地市場做產品設計，就是在蓋空中城堡。</p></blockquote>
+<blockquote><p>串熱門遊戲不是差異化，是門票。減少摩擦力才是唯一的做法。</p></blockquote>
+<blockquote><p>前期沒信心就燒大預算，是加速滅亡。</p></blockquote>
+<blockquote><p>漏斗的洞，不是用手遮起來，是想辦法跟大家討論把它補起來。</p></blockquote>
+<blockquote><p>Don't ask how to grow——要問哪些事情在阻擋我們成長。</p></blockquote>
+<blockquote><p>成長不是行銷的事情，是大家的事情。</p></blockquote>
+</div>
+
+<h2 id="s10"><span class="no">10</span>下一步</h2>
+<ul>
+  <li>📝 <b>回饋問卷</b>：請大家花 3 分鐘填寫（連結由統籌另行寄送）——你的回饋決定後續課程方向。</li>
+  <li>🔍 <b>Readiness Assessment</b>（規劃中）：針對 Jackpot Combo 做各面向檢測。</li>
+  <li>✅ <b>把一件事帶回工作</b>：課程的目的不是聽完，是回去改變一個做法——從你的漏斗裡挑一個洞，補起來。</li>
+</ul>
+
+<footer>
+  內部活動紀錄 · 2026.07.17 行銷 Workshop · 統籌整理：阿平<br>
+  內容整理自現場錄音與筆記，僅供同仁回顧使用。
+</footer>
+
+</div>
+</body>
+</html>
