@@ -5,42 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>行銷 Workshop 回顧 · 2026.07.17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#faf9f5; --card:#ffffff; --ink:#2c2c2a; --ink-2:#5f5e5a; --ink-3:#888780;
-  --line:#e3e1d9; --accent:#185fa5; --accent-bg:#eaf2fb;
+  --line:#e3e1d9; --accent:#185fa5; --accent-bg:#eaf2fb; --on-accent:#ffffff;
   --red:#a32d2d; --red-bg:#f9e3e3; --green:#2e6b3f; --green-bg:#e2f0e6;
   --gold:#8a6d1f; --gold-bg:#f7efd8;
+  --serif:"Noto Serif TC","PingFang TC",Georgia,serif;
+  --shadow:0 1px 3px rgba(40,40,30,.05);
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#191917; --card:#22221f; --ink:#e8e6e0; --ink-2:#b4b2a9; --ink-3:#888780;
-    --line:#3a3935; --accent:#7fb3e8; --accent-bg:#1d2c3d;
+    --line:#3a3935; --accent:#7fb3e8; --accent-bg:#1d2c3d; --on-accent:#14202e;
     --red:#e08a8a; --red-bg:#3d2222; --green:#8cc79d; --green-bg:#1e3325;
     --gold:#d9bc6a; --gold-bg:#3a3220;
+    --shadow:none;
   }
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,"Helvetica Neue","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
-  line-height:1.75;font-size:16px;}
+  line-height:1.75;font-size:16px;
+  -webkit-font-smoothing:antialiased;}
 .wrap{max-width:780px;margin:0 auto;padding:0 20px 80px;}
-header{padding:64px 0 8px;}
-.kicker{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.12em;}
-h1{font-size:clamp(26px,5vw,36px);line-height:1.3;margin:.3em 0 .2em;}
-.sub{color:var(--ink-2);font-size:15px;margin:0;}
-.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+
+/* 閱讀進度條 */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:99;}
+
+header{padding:72px 0 8px;}
+.kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.22em;}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,6vw,44px);line-height:1.25;
+  margin:.35em 0 .25em;letter-spacing:.01em;}
+.sub{color:var(--ink-2);font-size:15px;margin:0;line-height:1.7;}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
 .meta span{font-size:13px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:3px 12px;}
-.thesis{margin:36px 0;background:var(--accent-bg);border-left:4px solid var(--accent);
-  border-radius:0 10px 10px 0;padding:18px 22px;font-size:17px;font-weight:600;line-height:1.8;}
-h2{font-size:21px;margin:56px 0 6px;padding-top:16px;border-top:1px solid var(--line);}
-h2 .no{color:var(--accent);font-family:Georgia,serif;margin-right:10px;}
-h3{font-size:16.5px;margin:28px 0 8px;}
+  border-radius:999px;padding:4px 14px;}
+.thesis{margin:40px 0;background:var(--accent-bg);border-left:4px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:22px 26px;font-size:17.5px;font-weight:700;line-height:1.9;
+  font-family:var(--serif);}
+h2{font-family:var(--serif);font-weight:900;font-size:23px;margin:72px 0 8px;
+  scroll-margin-top:28px;display:flex;align-items:center;gap:12px;}
+h2 .no{flex:none;display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:9px;background:var(--accent);color:var(--on-accent);
+  font-family:-apple-system,"Helvetica Neue",sans-serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+h3{font-size:16.5px;margin:28px 0 8px;font-weight:700;}
 p{margin:.6em 0;}
 .lede{color:var(--ink-2);margin-top:0;}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0;}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow);}
 .card b{display:block;margin-bottom:4px;}
 .card small{color:var(--ink-2);line-height:1.6;display:block;}
 table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;background:var(--card);
@@ -56,10 +73,10 @@ tr:last-child td{border-bottom:none;}
 .note{font-size:13.5px;color:var(--ink-3);}
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:18px 0;}
 blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;
-  padding:16px 18px;font-size:15px;line-height:1.7;position:relative;}
-blockquote::before{content:"“";position:absolute;top:2px;left:12px;font-size:34px;color:var(--accent);
+  padding:16px 18px;font-size:15px;line-height:1.75;position:relative;box-shadow:var(--shadow);}
+blockquote::before{content:"“";position:absolute;top:2px;left:12px;font-size:36px;color:var(--accent);
   font-family:Georgia,serif;opacity:.45;}
-blockquote p{margin:0 0 0 20px;}
+blockquote p{margin:0 0 0 22px;font-family:var(--serif);font-weight:700;}
 .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0;}
 .flow .step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 12px;
   font-size:14px;font-weight:600;}
@@ -74,13 +91,49 @@ li{margin:.25em 0;}
 footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);
   font-size:13px;color:var(--ink-3);line-height:1.8;}
 a{color:var(--accent);}
-.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;
-  font-size:14.5px;margin:24px 0;}
-.toc b{font-size:13px;color:var(--ink-2);letter-spacing:.08em;}
-.toc a{text-decoration:none;display:inline-block;margin:2px 14px 2px 0;}
+.toc{margin:28px 0;font-size:14px;}
+.toc b{display:block;font-size:12.5px;color:var(--ink-3);letter-spacing:.18em;margin-bottom:8px;}
+.toc a{text-decoration:none;display:inline-block;margin:3px 6px 3px 0;padding:4px 14px;
+  background:var(--card);border:1px solid var(--line);border-radius:999px;color:var(--ink-2);
+  transition:color .2s,border-color .2s;}
+.toc a:hover{color:var(--accent);border-color:var(--accent);}
+
+/* 漏斗紅綠條狀圖（§05） */
+.fbars{display:flex;flex-direction:column;gap:16px;margin:20px 0;
+  background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow);}
+.fb-head{line-height:1.55;}
+.fb-head b{margin-right:8px;}
+.fb-head span{color:var(--ink-2);font-size:13.5px;}
+.fb{display:flex;align-items:center;gap:8px;margin-top:4px;}
+.fb i{display:block;height:11px;border-radius:3px;width:var(--w);min-width:5px;}
+.fb.r i{background:var(--red);opacity:.85;}
+.fb.g i{background:var(--green);}
+.fb em{font-style:normal;font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.fb.r em{color:var(--red);}
+.fb.g em{color:var(--green);}
+.fb-legend{font-size:12.5px;color:var(--ink-3);}
+
+/* 回到頂端 */
+.top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:999px;
+  background:var(--card);border:1px solid var(--line);color:var(--accent);text-decoration:none;
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+  box-shadow:0 2px 12px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .3s;z-index:98;}
+.top.show{opacity:1;pointer-events:auto;}
+
+/* 滾動淡入（JS 加上 .rv 才生效；關掉 JS 或 reduced-motion 一律直接顯示） */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;}
+.rv.in{opacity:1;transform:none;}
+.fbars.rv .fb i{width:0;transition:width .9s cubic-bezier(.2,.7,.2,1) .15s;}
+.fbars.rv.in .fb i{width:var(--w);}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .fbars.rv .fb i{width:var(--w);transition:none}
+}
 </style>
 </head>
 <body>
+<div class="progress" id="pg"></div>
 <div class="wrap">
 
 <header>
@@ -88,10 +141,10 @@ a{color:var(--accent);}
   <h1>行銷 Workshop 活動回顧</h1>
   <p class="sub">Gaming Growth Fundamentals &amp; Building a Growth-Ready Organization for the Philippines Market</p>
   <div class="meta">
-    <span>📅 2026 / 7 / 17（五）14:30–18:00</span>
-    <span>📍 Force 4F 大會議室</span>
-    <span>🎓 講師：Steve（Gaming 行銷顧問）</span>
-    <span>👥 5 組 · 20 人參與</span>
+    <span>2026 / 7 / 17（五）14:30–18:00</span>
+    <span>Force 4F 大會議室</span>
+    <span>講師：Steve（Gaming 行銷顧問）</span>
+    <span>5 組 · 20 人參與</span>
   </div>
 </header>
 
@@ -154,17 +207,49 @@ a{color:var(--accent);}
 
 <h2 id="s5"><span class="no">05</span>增長瓶頸與漏斗成本</h2>
 <p class="lede">任務二的情境：1000 人進站，每一層都在漏水。紅＝優化前、綠＝優化後。</p>
-<div class="tablewrap"><table>
-  <tr><th>#</th><th>步驟</th><th>摩擦點</th><th>前</th><th>後</th></tr>
-  <tr><td>01</td><td>技術加載</td><td>首頁 &gt;3 秒、包體過大（弱網下當天（D0）流失 +30%）</td><td><span class="r">1000</span></td><td><span class="g">1000</span></td></tr>
-  <tr><td>02</td><td>引導註冊</td><td>沒體驗到樂趣就強迫 KYC（實名認證），心理摩擦大</td><td><span class="r">700</span></td><td><span class="g">900</span></td></tr>
-  <tr><td>03</td><td>開始遊戲</td><td>熱門遊戲入口隱蔽、要多次跳轉</td><td><span class="r">500</span></td><td><span class="g">700</span></td></tr>
-  <tr><td>04</td><td>賺錢/破產</td><td>沒有即時首存轉跳或救援</td><td><span class="r">200</span></td><td><span class="g">500</span></td></tr>
-  <tr><td>05</td><td>金流引導</td><td>儲值按鈕隱蔽、支付介接延遲報錯</td><td><span class="r">100</span></td><td><span class="g">350</span></td></tr>
-  <tr><td>06</td><td>D0 結束</td><td>沒引導安裝 App（APK/PWA），之後召回只能發要錢的簡訊</td><td><span class="r">60</span></td><td><span class="g">200</span></td></tr>
-  <tr><td>07</td><td>玩家 2 訪</td><td>回來後無事可做</td><td><span class="r">20</span></td><td><span class="g">100</span></td></tr>
-  <tr><td>08</td><td>玩家 3 訪</td><td>錢包複雜違反直覺、出金完再流失</td><td><span class="r">10</span></td><td><span class="g">40</span></td></tr>
-</table></div>
+<div class="fbars">
+  <div class="fb-row">
+    <div class="fb-head"><b>01 技術加載</b><span>首頁 &gt;3 秒、包體過大（弱網下當天（D0）流失 +30%）</span></div>
+    <div class="fb r" style="--w:100%"><i></i><em>1000</em></div>
+    <div class="fb g" style="--w:100%"><i></i><em>1000</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>02 引導註冊</b><span>沒體驗到樂趣就強迫 KYC（實名認證），心理摩擦大</span></div>
+    <div class="fb r" style="--w:70%"><i></i><em>700</em></div>
+    <div class="fb g" style="--w:90%"><i></i><em>900</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>03 開始遊戲</b><span>熱門遊戲入口隱蔽、要多次跳轉</span></div>
+    <div class="fb r" style="--w:50%"><i></i><em>500</em></div>
+    <div class="fb g" style="--w:70%"><i></i><em>700</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>04 賺錢/破產</b><span>沒有即時首存轉跳或救援</span></div>
+    <div class="fb r" style="--w:20%"><i></i><em>200</em></div>
+    <div class="fb g" style="--w:50%"><i></i><em>500</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>05 金流引導</b><span>儲值按鈕隱蔽、支付介接延遲報錯</span></div>
+    <div class="fb r" style="--w:10%"><i></i><em>100</em></div>
+    <div class="fb g" style="--w:35%"><i></i><em>350</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>06 D0 結束</b><span>沒引導安裝 App（APK/PWA），之後召回只能發要錢的簡訊</span></div>
+    <div class="fb r" style="--w:6%"><i></i><em>60</em></div>
+    <div class="fb g" style="--w:20%"><i></i><em>200</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>07 玩家 2 訪</b><span>回來後無事可做</span></div>
+    <div class="fb r" style="--w:2%"><i></i><em>20</em></div>
+    <div class="fb g" style="--w:10%"><i></i><em>100</em></div>
+  </div>
+  <div class="fb-row">
+    <div class="fb-head"><b>08 玩家 3 訪</b><span>錢包複雜違反直覺、出金完再流失</span></div>
+    <div class="fb r" style="--w:1%"><i></i><em>10</em></div>
+    <div class="fb g" style="--w:4%"><i></i><em>40</em></div>
+  </div>
+  <div class="fb-legend">長條長度＝該步驟還留住的人數（滿版＝1000 人）。<span class="r">紅＝優化前</span>　<span class="g">綠＝優化後</span></div>
+</div>
 <div class="cards">
   <div class="card"><b>開始遊戲成本</b><small><span class="r">$10/人</span> → <span class="g">$7.14/人</span>（降約 28.6%）</small></div>
   <div class="card"><b>3 訪成本</b><small><span class="r">$500/人</span> → <span class="g">$125/人</span>（降 75%）——「3 訪」＝玩家第三次回訪，成本＝廣告費 5000 ÷ 走到這一步的人數</small></div>
@@ -267,5 +352,31 @@ a{color:var(--accent);}
 </div>
 
 </div>
+<a class="top" href="#" aria-label="回到頂端">↑</a>
+<script>
+var pg = document.getElementById('pg');
+var topBtn = document.querySelector('.top');
+addEventListener('scroll', function () {
+  var h = document.documentElement;
+  var max = h.scrollHeight - h.clientHeight;
+  pg.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+  topBtn.classList.toggle('show', h.scrollTop > 600);
+}, { passive: true });
+topBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  scrollTo({ top: 0, behavior: 'smooth' });
+});
+/* 滾動淡入：JS 掛 .rv 才會先隱藏，關 JS 或 reduced-motion 都直接顯示 */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('h2,.thesis,.toc,.card,blockquote,.flow,details,.fbars,.tablewrap').forEach(function (el) {
+    el.classList.add('rv'); io.observe(el);
+  });
+}
+</script>
 </body>
 </html>
