@@ -18,16 +18,9 @@
   --serif:"Noto Serif TC","PingFang TC",Georgia,serif;
   --shadow:0 1px 3px rgba(60,40,25,.05);
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#201a16; --card:#2a231d; --ink:#ede7dd; --ink-2:#bfb4a6; --ink-3:#8f8578;
-    --line:#40372e; --accent:#f08a6b; --accent-bg:#3d2418; --on-accent:#331107;
-    --red:#e08a8a; --red-bg:#3d2222; --green:#8cc79d; --green-bg:#1e3325;
-    --gold:#d9bc6a; --gold-bg:#3a3220;
-    --shadow:none;
-  }
-}
+/* 固定淺色，不跟隨系統深色模式 */
 *{box-sizing:border-box}
+html{color-scheme:light}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,"Helvetica Neue","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
