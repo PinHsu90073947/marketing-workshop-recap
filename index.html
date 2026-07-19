@@ -5,18 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>行銷 Workshop 回顧 · 2026.07.17</title>
+<link rel="icon" type="image/png" href="force-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Sunset Boulevard：暖米底、橘紅強調、深青墨字 */
-  --bg:#faf5ec; --card:#ffffff; --ink:#264653; --ink-2:#5d7280; --ink-3:#8fa0aa;
-  --line:#ecdfca; --accent:#d95b35; --accent-bg:#fdeae2; --on-accent:#ffffff;
+  /* Force 品牌配色：深靛藍為主、橘→洋紅漸層點綴、淺冷底 */
+  --bg:#f5f5f9; --card:#ffffff; --ink:#1d1563; --ink-2:#565083; --ink-3:#918dae;
+  --line:#e6e5f0; --accent:#c21c77; --accent-bg:#fce9f3; --on-accent:#ffffff;
+  --grad:linear-gradient(160deg,#f9a22f 0%,#f5289e 100%);
   --red:#a32d2d; --red-bg:#f9e3e3; --green:#2e6b3f; --green-bg:#e2f0e6;
   --gold:#8a6d1f; --gold-bg:#f7efd8;
   --serif:"Noto Serif TC","PingFang TC",Georgia,serif;
-  --shadow:0 1px 3px rgba(60,40,25,.05);
+  --shadow:0 1px 3px rgba(29,21,99,.06);
 }
 /* 固定淺色，不跟隨系統深色模式 */
 *{box-sizing:border-box}
@@ -29,9 +31,10 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .wrap{max-width:780px;margin:0 auto;padding:0 20px 80px;}
 
 /* 閱讀進度條 */
-.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:99;}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:99;}
 
-header{padding:72px 0 8px;}
+header{padding:64px 0 8px;}
+.logo{display:block;height:96px;width:auto;margin:0 0 18px -4px;}
 .kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.22em;}
 h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,6vw,44px);line-height:1.25;
   margin:.35em 0 .25em;letter-spacing:.01em;}
@@ -45,7 +48,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,6vw,44px);line-
 h2{font-family:var(--serif);font-weight:900;font-size:23px;margin:72px 0 8px;
   scroll-margin-top:28px;display:flex;align-items:center;gap:12px;}
 h2 .no{flex:none;display:inline-flex;align-items:center;justify-content:center;
-  width:32px;height:32px;border-radius:9px;background:var(--accent);color:var(--on-accent);
+  width:32px;height:32px;border-radius:9px;background:var(--ink);color:var(--on-accent);
   font-family:-apple-system,"Helvetica Neue",sans-serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
 h3{font-size:16.5px;margin:28px 0 8px;font-weight:700;}
 p{margin:.6em 0;}
@@ -148,6 +151,7 @@ sup.fn{color:var(--accent);font-weight:700;font-size:11px;margin:0 1px;}
 <div class="wrap">
 
 <header>
+  <img class="logo" src="force-logo.png" alt="Force" width="750" height="632">
   <div class="kicker">INTERNAL WORKSHOP RECAP</div>
   <h1>行銷 Workshop 活動回顧</h1>
   <p class="sub">Gaming Growth Fundamentals &amp; Building a Growth-Ready Organization for the Philippines Market</p>
