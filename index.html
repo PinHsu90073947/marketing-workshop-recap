@@ -114,6 +114,15 @@ a{color:var(--accent);}
   transition:background .2s,color .2s;}
 .jump:hover{background:var(--accent);color:var(--on-accent);}
 
+/* 指標方格（任務一）＋答案註記 */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.chips .chip{font-size:13.5px;font-weight:600;color:var(--ink);
+  background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 12px;}
+sup.fn{color:var(--accent);font-weight:700;font-size:11px;margin:0 1px;}
+.notelist{font-size:13.5px;color:var(--ink-3);line-height:1.7;margin:.4em 0;padding-left:1.5em;}
+.notelist li{margin:.35em 0;}
+.notelist b{color:var(--accent);}
+
 /* 回到頂端 */
 .top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:999px;
   background:var(--card);border:1px solid var(--line);color:var(--accent);text-decoration:none;
@@ -287,20 +296,37 @@ a{color:var(--accent);}
 <h2 id="s8"><span class="no">08</span>三個分組任務</h2>
 <details><summary>任務一：Growth Module Funnel Check</summary><div class="body">
 <p>寫出 AARRR 全名，並把下面這 <b>14 項數據指標</b>歸類到漏斗五層。先自己分分看：</p>
-<div class="tablewrap"><table>
-<tr><th>要歸類的 14 項指標</th></tr>
-<tr><td>ARPU、PWA/APK 安裝數、廣告曝光數、好友分享碼、首頁訪客數、Day3 遊戲時間、老帶新回饋系統、DAU、Day2 留存率、LTV、註冊數、First bet %、邀請好友數、Pay%（付費率）</td></tr>
-</table></div>
+<div class="chips">
+  <span class="chip">ARPU</span>
+  <span class="chip">PWA/APK 安裝數</span>
+  <span class="chip">廣告曝光數</span>
+  <span class="chip">好友分享碼</span>
+  <span class="chip">首頁訪客數</span>
+  <span class="chip">Day3 遊戲時間</span>
+  <span class="chip">老帶新回饋系統</span>
+  <span class="chip">DAU</span>
+  <span class="chip">Day2 留存率</span>
+  <span class="chip">LTV</span>
+  <span class="chip">註冊數</span>
+  <span class="chip">First bet %</span>
+  <span class="chip">邀請好友數</span>
+  <span class="chip">Pay%（付費率）</span>
+</div>
 <details><summary>公布答案</summary><div class="body">
 <div class="tablewrap"><table>
 <tr><th>層</th><th>指標</th></tr>
-<tr><td>Acquisition 獲客</td><td>PWA/APK 安裝數、廣告曝光數、首頁訪客數</td></tr>
-<tr><td>Activation 啟用</td><td>註冊數、First bet %</td></tr>
-<tr><td>Retention 留存</td><td>Day3 遊戲時間、DAU、Day2 留存率</td></tr>
-<tr><td>Referral 推薦</td><td>好友分享碼、老帶新回饋系統、邀請好友數</td></tr>
+<tr><td>Acquisition 獲客</td><td>PWA/APK 安裝數<sup class="fn">1</sup>、廣告曝光數、首頁訪客數</td></tr>
+<tr><td>Activation 啟用</td><td>註冊數<sup class="fn">3</sup>、First bet %</td></tr>
+<tr><td>Retention 留存</td><td>Day3 遊戲時間、DAU<sup class="fn">3</sup>、Day2 留存率</td></tr>
+<tr><td>Referral 推薦</td><td>好友分享碼<sup class="fn">2</sup>、老帶新回饋系統、邀請好友數</td></tr>
 <tr><td>Revenue 營收</td><td>ARPU、LTV、Pay%</td></tr>
 </table></div>
-<p class="note">五組作答與講師認可的答案一致，無人失分。討論點：PWA/APK 安裝數可同屬 Acquisition／Activation（先安裝再註冊，或進站就自動註冊，順序會不同）；好友分享碼站在「使用分享功能的玩家」角度歸 Referral；當日註冊也算 Active。</p>
+<p class="note">五組作答與講師認可的答案一致，無人失分。判定上有三個要注意的地方：</p>
+<ul class="notelist">
+<li><b>1</b>　<b>PWA/APK 安裝數</b>可同屬 Acquisition／Activation——先安裝再註冊，或進站就自動註冊，順序會不同。</li>
+<li><b>2</b>　<b>好友分享碼</b>歸 Referral——判定角度是「使用分享功能的玩家」，不是被拉進來的那個人。</li>
+<li><b>3</b>　<b>註冊數</b>放 Activation，但當日註冊的人同時也算進當天的 Active（DAU），所以 DAU 也帶到這個註記。</li>
+</ul>
 </div></details>
 </div></details>
 <details><summary>任務二：How To Support Growth Module Funnel</summary><div class="body">
