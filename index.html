@@ -122,6 +122,7 @@ sup.fn{color:var(--accent);font-weight:700;font-size:11px;margin:0 1px;}
 .notelist{font-size:13.5px;color:var(--ink-3);line-height:1.7;margin:.4em 0;padding-left:1.5em;}
 .notelist li{margin:.35em 0;}
 .notelist b{color:var(--accent);}
+.alt{display:inline-block;margin-top:3px;color:var(--ink-3);font-size:12.5px;font-weight:400;}
 
 /* 回到頂端 */
 .top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:999px;
@@ -316,16 +317,16 @@ sup.fn{color:var(--accent);font-weight:700;font-size:11px;margin:0 1px;}
 <div class="tablewrap"><table>
 <tr><th>層</th><th>指標</th></tr>
 <tr><td>Acquisition 獲客</td><td>PWA/APK 安裝數<sup class="fn">1</sup>、廣告曝光數、首頁訪客數</td></tr>
-<tr><td>Activation 啟用</td><td>註冊數、First bet %</td></tr>
+<tr><td>Activation 啟用</td><td>註冊數、First bet %<br><span class="alt">也可歸此層：PWA/APK 安裝數<sup class="fn">1</sup>、DAU<sup class="fn">3</sup></span></td></tr>
 <tr><td>Retention 留存</td><td>Day3 遊戲時間、DAU<sup class="fn">3</sup>、Day2 留存率</td></tr>
 <tr><td>Referral 推薦</td><td>好友分享碼<sup class="fn">2</sup>、老帶新回饋系統、邀請好友數</td></tr>
 <tr><td>Revenue 營收</td><td>ARPU、LTV、Pay%</td></tr>
 </table></div>
-<p class="note">五組作答與講師認可的答案一致，無人失分。判定上有三個要注意的地方：</p>
+<p class="note">有幾項可以同時歸在不同層，原因如下：</p>
 <ul class="notelist">
-<li><b>1</b>　<b>PWA/APK 安裝數</b>可同屬 Acquisition／Activation——先安裝再註冊，或進站就自動註冊，順序會不同。</li>
-<li><b>2</b>　<b>好友分享碼</b>歸 Referral——判定角度是「使用分享功能的玩家」，不是被拉進來的那個人。</li>
-<li><b>3</b>　<b>DAU</b>放 Retention（看回訪／留存），但當天剛註冊的新人，當天也算一個活躍用戶——所以 DAU 會把「新註冊」和「老玩家回訪」混在一起，不是純粹的留存數字。</li>
+<li><b>1</b>　<b>PWA/APK 安裝數</b>：算 Acquisition，也算 Activation——H5 玩家可能先安裝再註冊、手遊進站就自動註冊，安裝和啟用的先後不一定。</li>
+<li><b>2</b>　<b>好友分享碼</b>：歸 Referral。乍看也像 Acquisition（有人被分享碼帶進來），但判定角度是「使用分享功能的玩家」——有人用了分享碼就代表 Referral 被觸發，所以算在分享者這一層。</li>
+<li><b>3</b>　<b>DAU</b>：算 Retention（看每天有多少人回訪），也算 Activation——當天剛註冊的新人，註冊第一天就被算成一個活躍用戶，所以 DAU 也包含當天新啟用的人。</li>
 </ul>
 </div></details>
 </div></details>
